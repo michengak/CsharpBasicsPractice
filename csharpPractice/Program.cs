@@ -65,21 +65,42 @@ namespace csharpPractice
             //5. Nullable value type
             //all value type can have  their nullable type use the use of "?" just like reference type 
 
-            bool? AreYouMajor = null;
+            //bool? AreYouMajor = null;
 
-            if (AreYouMajor == true)
+            //if (AreYouMajor == true)
+            //{
+            //    Console.WriteLine("User is Major");
+            //}
+            //else if (AreYouMajor == false)
+            //{
+            //    Console.WriteLine("User is Not Major");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("User did not answer the Question");
+            //}
+
+            //6. use of switch to replace multiple if else statement
+
+            Console.WriteLine("Please enter a number");
+            int UserNumber = int.Parse(Console.ReadLine());
+
+            switch (UserNumber)
             {
-                Console.WriteLine("User is Major");
+                case 10:
+                    Console.WriteLine("Your number is 10");
+                    break;
+                case 20:
+                    Console.WriteLine("Your number is 20");
+                    break;
+                case 30:
+                    Console.WriteLine("Yoru number is 30");
+                    break;
+                default:
+                    Console.WriteLine("Your number is not 10, 20, 30");
+                        break;
             }
-            else if (AreYouMajor == false)
-            {
-                Console.WriteLine("User is Not Major");
-            }
-            else
-            {
-                Console.WriteLine("User did not answer the Question");
-            }
-            
+
 
 
         }
