@@ -13,7 +13,7 @@ namespace csharpPractice
 
             //1. printing and reading for the console
 
-            //Console.WriteLine("Please enter your fist name");
+            //Console.WriteLine("Please enter your first name");
             //string FirstName = Console.ReadLine();
 
             //Console.WriteLine("Please enter your last name");
@@ -59,10 +59,11 @@ namespace csharpPractice
 
             //int Result = Numerator % Denominator;
 
-            //Console.WriteLine("Result = 0", Result );
+            //Console.WriteLine("Result = {0}", Result );
 
 
             //5. Nullable value type
+
             //all value type can have  their nullable type use the use of "?" just like reference type 
 
             //bool? AreYouMajor = null;
@@ -82,27 +83,53 @@ namespace csharpPractice
 
             //6. use of switch to replace multiple if else statement
 
-            Console.WriteLine("Please enter a number");
-            int UserNumber = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Please enter a number");
+            //int UserNumber = int.Parse(Console.ReadLine());
 
-            switch (UserNumber)
-            {
-                case 10:
-                    Console.WriteLine("Your number is 10");
-                    break;
-                case 20:
-                    Console.WriteLine("Your number is 20");
-                    break;
-                case 30:
-                    Console.WriteLine("Yoru number is 30");
-                    break;
-                default:
-                    Console.WriteLine("Your number is not 10, 20, 30");
-                        break;
-            }
+            //switch (UserNumber)
+            //{
+            //    case 10:
+            //        Console.WriteLine("Your number is 10");
+            //        break;
+            //    case 20:
+            //        Console.WriteLine("Your number is 20");
+            //        break;
+            //    case 30:
+            //        Console.WriteLine("Yoru number is 30");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Your number is not 10, 20, 30");
+            //            break;
+            //}
 
+            //7.Null coalescing operator ??
 
+            // 7.a) example without coalescing operator
 
+            //int? TicketsOnSale = 100;
+
+            //int AvailableTickets;
+
+            //if (TicketsOnSale == null)
+            //{
+            //    AvailableTickets = 0;
+
+            //}
+            //else
+            //{
+            //    AvailableTickets = (int)TicketsOnSale;
+            //}
+
+            //Console.WriteLine("AvailableTickets = {0}", AvailableTickets);
+
+            //7.b) same example with null coalescing operator
+
+            int? TicketsOnSale = 100;
+
+            int AvailableTickets = TicketsOnSale ?? 0;
+
+            Console.WriteLine("AvailableTickets = {0}", TicketsOnSale);
         }
+            
     }
 }
